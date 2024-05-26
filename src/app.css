@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    background: #f0eff5;
+    font-family: poppins, sans-serif;
+    min-height: 100vh;
+    color: #27282f;
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.86rem;
+    font-weight: 500;
+  }
+
+  h6 {
+    font-size: 7.6rem;
+  }
+
+  p {
+    font-size: 0.86rem;
+    color: #56555e;
+  }
+
+  small {
+    font-weight: 300;
+    font-size: 0.77rem;
+
+  }
+
+  .sidebar-link {
+    @apply flex items-center gap-5 h-16 text-gray-light relative;
+  }
+
+  .sidebar-link-icon {
+    @apply text-2xl ml-12;
+  }
+
+  .sidebar-link-active {
+    @apply bg-white text-primary;
+  }
+
+  .sidebar-link-active:before {
+    content: "";
+    @apply w-1.5 h-full absolute bg-primary;
+  }
+
+  .sidebar-link-hover:hover {
+    @apply text-primary;
+  }
+
+  .sidebar-link-hover:hover .sidebar-link-icon {
+    @apply ml-8;
+  }
+
+
+
+}
