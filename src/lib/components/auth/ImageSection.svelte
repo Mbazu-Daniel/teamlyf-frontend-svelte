@@ -1,10 +1,9 @@
 <script>
-  export let backgroundImage = "../images/form-design.svg";
-  export let logoImage = "../images/teamlyf-logo.svg";
-  export let iconImage = "../images/productivity.svg";
-  export let title = "Productivity at its peak";
-  export let description =
-    "TeamLyf — where productivity meets collaboration at its peak. Elevate your work experience as TeamLyf seamlessly integrates tools and streamlines communication right at the core of your team's success.";
+  export let backgroundImage;
+  export let logoImage;
+  export let iconImage;
+  export let title;
+  export let description;
 </script>
 
 <div class=" md:w-1/2 flex flex-col justify-center items-center relative">
