@@ -1,5 +1,12 @@
 <div class="">
-  <h2 class="text-gray-700 text-4xl font-bold -mt-12 mb-10">Create account</h2>
+  <h2 class="text-gray-700 text-4xl font-bold -mt-12 mb-2">Create account</h2>
+
+  <div class="flex justify-between mb-10 w-[160px]">
+    <span class="text-xl font-medium text-gray-700"> Sign up with </span>
+
+    <img src="../images/teamlyf-logo.svg" alt="teamyf logo" class="w-[72px]" />
+  </div>
+
   <form>
     <div class="mb-4">
       <label class="block text-gray-700 text-xl font-bold mb-2" for="email">
