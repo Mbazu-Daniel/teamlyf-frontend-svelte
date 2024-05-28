@@ -2,7 +2,7 @@
   <div class="flex items-center">
     <span class="flex item-center justify-center min-w-[60px]">
       <img
-        src="../images/logo.png"
+        src="../images/other-logo.png"
         alt="company logo"
         class="w-10 rounded-md"
       />

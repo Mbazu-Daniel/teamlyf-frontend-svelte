@@ -19,7 +19,7 @@
 	</div>
 	<div class="flex gap-4 items-center">
 		<div class="w-12 h-12 rounded-full overflow-hidden">
-			<img src="./images/profile.svg" class="block w-16 h-12 rounded-[50%]" alt="profile" />
+			<img src="../images/profile.svg" class="block w-16 h-12 rounded-[50%]" alt="profile" />
 		</div>
 		<div class="flex flex-col">
 			<h3 class="font-bold">Daniel Mbazu</h3>
