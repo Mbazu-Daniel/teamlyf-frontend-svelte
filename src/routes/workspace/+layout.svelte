@@ -1,7 +1,7 @@
 <script lang="ts">
   import Navbar from "$lib/components/shared/Navbar.svelte";
-  import "../../app.css";
   import Main from "$lib/components/shared/Main.svelte";
+  import "../../app.css";
 </script>
 
 <!-- text-decoration: none;
