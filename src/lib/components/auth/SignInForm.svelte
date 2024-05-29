@@ -32,7 +32,7 @@
 
     <div class="flex flex-col items-end mb-6">
       <a
-        class="inline-block align-baseline font-bold text-md text-primary hover:text-primary mb-8"
+        class="inline-block align-baseline text-md text-primary hover:text-primary mb-8"
         href="/auth/forgot-password"
       >
         Forgot password?

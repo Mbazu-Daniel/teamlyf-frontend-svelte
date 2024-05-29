@@ -1,6 +1,7 @@
 <script>
   import ImageSection from "./ImageSection.svelte";
   import AuthCard from "./AuthCard.svelte";
+  import ProgressBar from "$lib/components/workspace/ProgressBar.svelte";
   export let authComponent;
   export let imageSectionProps;
 </script>
@@ -9,6 +10,7 @@
   <ImageSection {...imageSectionProps} />
 
   <AuthCard>
+  
     <svelte:component this={authComponent} />
   </AuthCard>
 </div>

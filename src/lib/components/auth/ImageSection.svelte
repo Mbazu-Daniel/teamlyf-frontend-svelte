@@ -1,7 +1,7 @@
 <script>
-  export let backgroundImage;
-  export let logoImage;
-  export let iconImage;
+  export let backgroundImage =   "../images/background-gradient.svg"
+  export let logoImage =      "../images/teamlyf-logo.svg"
+  export let iconImage =      "../images/productivity.svg"
   export let title;
   export let description;
 </script>
