@@ -1,11 +1,31 @@
+<script lang="ts">
+import axios from "axios"
+import {push} from "svelte-spa-router"
+
+//TODO: adjust this code to login users immediately they register their account 
+
+// TODO: the users should be redirected to their workspace if they one but if they don't it should redirect them to the create a workspace flow 
+
+let email = "", password = "";
+
+$: submit = async () => {
+  const user=  await axios.post("/auth/login", {
+    email, password
+  }, {withCredentials: true})
+
+  // push to the home
+  await push("/")
+}
+  </script>
+
 <div class="">
   <h2 class="text-gray-700 text-4xl font-bold -mt-12 mb-2">Login account</h2>
   <div class="flex justify-between mb-10 w-[160px]">
     <span class="text-xl font-medium text-gray-700"> Sign in with </span>
 
-    <img src="../images/teamlyf-logo.svg" alt="teamyf logo" class="w-[72px]" />
+    <img src="../images/teamlyf-logo.svg" alt="teamlyf logo" class="w-[72px]" />
   </div>
-  <form>
+  <form on:submit|preventDefault={submit}>
     <div class="mb-4">
       <label class="block text-gray-700 text-xl font-bold mb-2" for="email">
         Email Address
