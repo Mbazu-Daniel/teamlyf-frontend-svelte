@@ -9,12 +9,24 @@
 
   // Links array
   const links = [
-    { page: "workspace", name: "Dashboard", icon: "home" },
-    { page: "workspace", name: "Revenue", icon: "bar_chart" },
-    { page: "workspace", name: "Notifications", icon: "notifications" },
-    { page: "workspace", name: "Analytics", icon: "pie_chart" },
-    { page: "workspace", name: "Likes", icon: "favorite" },
-    { page: "workspace", name: "Wallets", icon: "account_balance_wallet" },
+    {
+      page: "dashboard",
+      name: "Dashboard",
+      icon: "../../navbar/dashboard.svg",
+    },
+    {
+      page: "projects",
+      name: "Projects",
+      icon: "../../navbar/projects.svg",
+    },
+    { page: "tasks", name: "Tasks", icon: "../../navbar/task.svg" },
+    {
+      page: "chats",
+      name: "Chats",
+      icon: "../../navbar/chats.svg",
+    },
+    { page: "drive", name: "Drive", icon: "../../navbar/folder.svg" },
+    { page: "schedules", name: "Schedules", icon: "../../navbar/schedules.svg" },
   ];
 </script>
 
@@ -32,7 +44,7 @@
           on:click={() => setActiveLink(link)}
           tabindex="0"
         >
-          <span class="material-icons-sharp">{link.icon}</span>
+          <img class="w-8" alt={link.name} src={link.icon} />
           <h4>{link.name}</h4>
         </a>
         {#if activeLink === link.name}

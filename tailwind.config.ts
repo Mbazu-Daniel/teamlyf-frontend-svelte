@@ -1,14 +1,16 @@
+import { fontFamily } from "tailwindcss/defaultTheme";
 import type { Config } from "tailwindcss";
 
-/** @type {import('tailwindcss').Config} */
-export default {
+const config: Config = {
   content: [
-    "./src/**/*.{svelte,js,ts}",
+    "./src/**/*.{html,js,svelte,ts}",
+    // "./src/**/*.{svelte,js,ts}",
     "./public/index.html",
     "./src/components/**/*.{svelte,js,ts}",
   ],
   purge: ["./src/**/*.{svelte,js,ts}"],
-  darkMode: "class",
+  darkMode: ["class"],
+  safelist: ["dark"],
   theme: {
     extend: {
       colors: {
@@ -28,17 +30,10 @@ export default {
         "warning-light": "rgba(234, 181, 7, 0.2)",
         "purple-light": "rgba(160, 99, 245, 0.2)",
       },
-      borderRadius: {
-        "1xl": "1rem",
-        "2xl": "6px",
-        "3xl": "1.6rem",
-      },
-      padding: {
-        1: "1rem",
-        2: "8px",
-      },
+      
     },
   },
-
   plugins: [],
-} as Config;
+};
+
+export default config;
