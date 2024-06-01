@@ -1,13 +1,13 @@
-<script>
-  // Default active link set to "Dashboard"
+<script lang="ts">
+  export let isCollapsed: boolean;
+
   let activeLink = "Dashboard";
 
-  function setActiveLink(link) {
-    activeLink = link.name;
+  function setActiveLink(link: { name: string }) {
+    activeLink = link.name || null;
     console.log("Active Link:", activeLink);
   }
 
-  // Links array
   const links = [
     {
       page: "dashboard",
@@ -26,12 +26,20 @@
       icon: "../../navbar/chats.svg",
     },
     { page: "drive", name: "Drive", icon: "../../navbar/folder.svg" },
-    { page: "schedules", name: "Schedules", icon: "../../navbar/schedules.svg" },
+    {
+      page: "schedules",
+      name: "Schedules",
+      icon: "../../navbar/schedules.svg",
+    },
   ];
 </script>
 
+
+
 <div class="mt-4">
-  <h2 class="text-2xl font-bold">Overview</h2>
+  <h2 class={`text-2xl font-bold ${isCollapsed ? "hidden" : "block"}`}>
+    Overview
+  </h2>
   <ul class="flex flex-col mt-4">
     {#each links as link}
       <li class="relative flex items-center gap-5 h-16 px-4 cursor-pointer">
@@ -44,8 +52,12 @@
           on:click={() => setActiveLink(link)}
           tabindex="0"
         >
-          <img class="w-8" alt={link.name} src={link.icon} />
-          <h4>{link.name}</h4>
+          <img
+            class={`${isCollapsed ? "w-10 h-10" : "w-8 h-8"}`}
+            alt={link.name}
+            src={link.icon}
+          />
+          <h4 class={`${isCollapsed ? "hidden" : "block"}`}>{link.name}</h4>
         </a>
         {#if activeLink === link.name}
           <div class="absolute left-0 w-1.5 h-full active-indicator"></div>

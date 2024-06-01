@@ -78,7 +78,7 @@
   }
 
   .sidebar-link-active {
-    @apply bg-white text-primary;
+    @apply bg-white text-red-800;
   }
 
   .sidebar-link-active:before {
@@ -86,11 +86,11 @@
     @apply w-1.5 h-full absolute bg-primary;
   }
 
-  .sidebar-link-hover:hover {
-    @apply text-primary;
+  .sidebar-link-active:hover {
+    @apply bg-primary text-white;
   }
 
-  .sidebar-link-hover:hover .sidebar-link-icon {
+  .sidebar-link-active:hover .sidebar-link-icon {
     @apply ml-8;
   }
 
