@@ -1,10 +1,10 @@
 <script lang="ts">
-  export let isCollapsed: boolean;
+  export let isCollapsed: boolean = false;
 
   let activeLink = "Dashboard";
 
-  function setActiveLink(link: { name: string }) {
-    activeLink = link.name || null;
+  function setActiveLink(link) {
+    activeLink = link.name;
     console.log("Active Link:", activeLink);
   }
 
@@ -34,10 +34,8 @@
   ];
 </script>
 
-
-
 <div class="mt-4">
-  <h2 class={`text-2xl font-bold ${isCollapsed ? "hidden" : "block"}`}>
+  <h2 class={`text-lg font-bold ${isCollapsed ? "hidden" : "block"}`}>
     Overview
   </h2>
   <ul class="flex flex-col mt-4">
@@ -52,11 +50,7 @@
           on:click={() => setActiveLink(link)}
           tabindex="0"
         >
-          <img
-            class={`${isCollapsed ? "w-10 h-10" : "w-8 h-8"}`}
-            alt={link.name}
-            src={link.icon}
-          />
+          <img class="w-8 h-8" alt={link.name} src={link.icon} />
           <h4 class={`${isCollapsed ? "hidden" : "block"}`}>{link.name}</h4>
         </a>
         {#if activeLink === link.name}
@@ -69,13 +63,13 @@
 
 <style>
   .active-link {
-    background-color: white;
-    color: rgb(71, 7, 234); /* Primary color */
+    background-color: #f2f2f2;
+    color: #9747ff;
   }
   .inactive-link {
-    color: #6b7280; /* Gray-500 color */
+    color: #6b7280;
   }
   .active-indicator {
-    background-color: rgb(71, 7, 234); /* Primary color */
+    background-color: rgb(71, 7, 234);
   }
 </style>

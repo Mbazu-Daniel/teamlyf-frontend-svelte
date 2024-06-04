@@ -19,7 +19,7 @@
   }
 
   body {
-    background: #f0eff5;
+    background: white;
     /* background: red; */
     font-family: poppins, sans-serif;
     min-height: 100vh;
@@ -65,35 +65,7 @@
     font-size: 0.77rem;
   }
 
-  .sidebar-link {
-    @apply flex items-center gap-5 h-16 text-gray-light relative;
-  }
-
-  .sidebar-link:hover {
-    @apply text-primary
-  }
-
-  .sidebar-link-icon {
-    @apply text-[1.7rem] ml-12;
-  }
-
-  .sidebar-link-active {
-    @apply bg-white text-red-800;
-  }
-
-  .sidebar-link-active:before {
-    content: "";
-    @apply w-1.5 h-full absolute bg-primary;
-  }
-
-  .sidebar-link-active:hover {
-    @apply bg-primary text-white;
-  }
-
-  .sidebar-link-active:hover .sidebar-link-icon {
-    @apply ml-8;
-  }
-
+ 
   /* Custom class for Material Icons Sharp */
   .material-icons-sharp {
     font-family: 'Material Icons Sharp';

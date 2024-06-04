@@ -19,7 +19,8 @@ const config: Config = {
         "gray-light": "#86848c",
         "gray-dark": "#56555e",
         dark: "#27282f",
-        primary: "rgb(71, 7, 234)",
+        primary: "#9747FF",
+        sidebar: "#f2f2f2",
         success: "rgb(34, 202, 75)",
         danger: "rgb(255, 67, 54)",
         warning: "rgb(234, 181, 7)",
@@ -30,7 +31,6 @@ const config: Config = {
         "warning-light": "rgba(234, 181, 7, 0.2)",
         "purple-light": "rgba(160, 99, 245, 0.2)",
       },
-      
     },
   },
   plugins: [],

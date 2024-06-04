@@ -4,4 +4,4 @@
 
 <p>/auth/register</p>
 <p>/auth/login</p>
-<p>/auth/workspace (stil in construction)</p>
+<p>/auth/workspace (still in construction)</p>

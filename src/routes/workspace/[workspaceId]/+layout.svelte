@@ -4,19 +4,22 @@
   import "../../../app.css";
 </script>
 
-<div class="grid grid-rows-[auto_1fr] grid-cols-[auto_1fr] h-screen">
+<div class="flex h-screen">
   <!-- Top Navbar -->
-  <div class="row-span-1 col-span-2">
+  <div class="fixed w-full z-20">
     <Navbar />
   </div>
 
-  <!-- Left Sidebar -->
-  <div class="row-span-1">
-    <LeftSideBar />
-  </div>
+  <!-- Sidebar and Main Content -->
+  <div class="flex pt-16 w-full">
+    <!-- Left Sidebar -->
+    <div class="fixed h-full">
+      <LeftSideBar />
+    </div>
 
-  <!-- Main Content -->
-  <main class="row-span-1 col-span-1 p-6">
-    <slot />
-  </main>
+    <!-- Main Content -->
+    <div class="flex-1 ml-[265px] transition-all duration-300 overflow-auto p-6 bg-green-100 main-content">
+      <slot />
+    </div>
+  </div>
 </div>

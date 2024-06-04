@@ -3,25 +3,38 @@
   import SidebarBottom from "./LeftSideBar/SidebarBottom.svelte";
   import SidebarRoom from "./LeftSideBar/SidebarRoom.svelte";
   import * as Avatar from "$lib/components/ui/avatar";
+  import { onMount } from "svelte";
 
   let isCollapsed = false;
 
   function toggleSidebar() {
     isCollapsed = !isCollapsed;
+    adjustMainMargin();
   }
+
+  function adjustMainMargin() {
+    const mainContent = document.querySelector(".main-content") as HTMLElement;
+    if (mainContent) {
+      mainContent.style.marginLeft = isCollapsed ? "48px" : "265px";
+    }
+  }
+
+  onMount(() => {
+    adjustMainMargin();
+  });
 </script>
 
 <div
-  class={`bg-white  ml-0 pl-6 h-full fixed ${isCollapsed ? "w-24" : "w-64"} transition-all duration-300 ml-4`}
+  class={`bg-sidebar py-2 px-6 h-full ${isCollapsed ? "w-24" : "w-[265px]"} transition-all duration-300`}
 >
-  <div class="relative h-full">
+  <div class="relative h-full flex flex-col">
     <header class="flex items-center justify-between py-4 pr-6">
       <div class="flex items-center">
         <span class="flex items-center justify-center">
           <Avatar.Root>
             <Avatar.Image
               src="../../images/other-logo.png"
-              alt="profile picture"
+              alt="workspace logo"
             />
             <Avatar.Fallback class="bg-primary text-white rounded-md"
               >DM</Avatar.Fallback
@@ -35,10 +48,11 @@
       </div>
     </header>
 
-    <!-- <WorkspaceCard /> -->
     <SidebarMenu {isCollapsed} />
-    <SidebarRoom />
-    <SidebarBottom />
+    <SidebarRoom {isCollapsed} />
+    <div class="mt-auto">
+      <SidebarBottom {isCollapsed} />
+    </div>
 
     <button
       class="absolute top-4 -right-4 w-10 bg-primary rounded-full transform transition-transform duration-300"
