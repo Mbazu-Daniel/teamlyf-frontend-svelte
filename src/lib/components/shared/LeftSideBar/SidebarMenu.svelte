@@ -40,10 +40,10 @@
   </h2>
   <ul class="flex flex-col mt-4">
     {#each links as link}
-      <li class="relative flex items-center gap-5 h-16 px-4 cursor-pointer">
+      <li class="relative flex items-center justify-center  gap-5 h-14 px-2 cursor-pointer">
         <a
           href={link.page}
-          class="flex items-center gap-5 h-16 w-full transition-colors duration-300 {activeLink ===
+          class="flex items-center gap-5 h-14 w-full transition-colors duration-300 {activeLink ===
           link.name
             ? 'active-link'
             : 'inactive-link'}"
@@ -54,7 +54,7 @@
           <h4 class={`${isCollapsed ? "hidden" : "block"}`}>{link.name}</h4>
         </a>
         {#if activeLink === link.name}
-          <div class="absolute left-0 w-1.5 h-full active-indicator"></div>
+          <div class="absolute left-0 w-1.5 h-full bg-primary"></div>
         {/if}
       </li>
     {/each}

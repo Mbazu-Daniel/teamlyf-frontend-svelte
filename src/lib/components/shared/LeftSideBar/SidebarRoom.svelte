@@ -10,10 +10,16 @@
   ];
 </script>
 
-<div class="p-4 mt-12">
+<div class="p-4 mt-7">
   <div class="flex justify-between items-center mb-4">
-    <h2 class={`text-lg font-semibold ${isCollapsed ? "hidden" : "block"}`}>Rooms</h2>
-    <a href="groups" class={`text-purple-500 text-sm ${isCollapsed ? "hidden" : "block"}`}>View all teams</a>
+    <h2 class={`text-lg font-semibold ${isCollapsed ? "hidden" : "block"}`}>
+      Rooms
+    </h2>
+    <a
+      href="groups"
+      class={`text-primary text-sm ${isCollapsed ? "hidden" : "block"}`}
+      >View all teams</a
+    >
   </div>
   <ul>
     {#each rooms as room}
@@ -23,7 +29,9 @@
         >
           <Avatar.Fallback>{room.initial}</Avatar.Fallback>
         </Avatar.Root>
-        <span class={`ml-4 ${isCollapsed ? "hidden" : "block"}`}>{room.name}</span>
+        <span class={`ml-4 ${isCollapsed ? "hidden" : "block"}`}
+          >{room.name}</span
+        >
       </li>
     {/each}
     <button

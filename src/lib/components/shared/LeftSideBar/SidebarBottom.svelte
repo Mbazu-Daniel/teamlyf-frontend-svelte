@@ -9,15 +9,17 @@
 
 <div class="p-4 mb-12">
   <div class="mb-4">
-    <h2 class={`text-lg font-semibold ${isCollapsed ? "hidden" : "block"}`}>General</h2>
+    <h2 class={`text-lg font-semibold ${isCollapsed ? "hidden" : "block"}`}>
+      General
+    </h2>
     <ul>
       {#each generalItems as item}
-        <li class="flex items-center mb-4">
+        <li class="flex items-center ${isCollapsed ? "justify-center" : ""} mb-4">
           <img src={item.icon} alt={item.name} class="w-6 h-6" />
           <span class={`ml-4 ${isCollapsed ? "hidden" : "block"}`}>{item.name}</span>
         </li>
       {/each}
-      <li class="flex items-center text-red-500 cursor-pointer">
+      <li class="flex items-center text-red-500 cursor-pointer ${isCollapsed ? "justify-center" : ""}">
         <img src="../../navbar/logout.svg" alt="Logout" class="w-6 h-6" />
         <span class={`ml-4 ${isCollapsed ? "hidden" : "block"}`}>Logout</span>
       </li>
