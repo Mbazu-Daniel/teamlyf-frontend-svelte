@@ -31,7 +31,7 @@ We follow the conventional commit message format to provide a clear and standard
 | feat   | Feature | New Feature                                | New feature implementations or additions.                                         |
 | fix    | Fix     | Bug Fixes                                  | Bug fixes or corrections.                                                         |
 | perf   | Perf    | Performance Improvements                   | Performance-related improvements.                                                 |
-| update | Update  | Code Refactoring                           | Code changes that don't fix bugs or add features, but improve the code structure. |
+| refactor | Refactor  | Code Refactoring                           | Code changes that don't fix bugs or add features, but improve the code structure. |
 | revert | Revert  | Revert Previous Commits                    | Reverting previous commits.                                                       |
 | style  | Style   | Code Formatting or Style                   | Changes related to code formatting or style.                                      |
 | assets | Assets  | Add or Update Assets (e.g., images, files) | Changes related to adding or updating assets, such as images or other files.      |
