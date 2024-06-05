@@ -18,7 +18,7 @@
     </div>
 
     <!-- Main Content -->
-    <div class="flex-1 ml-[265px] transition-all duration-300 overflow-auto p-6 bg-green-100 main-content">
+    <div class="flex-1 ml-[265px] transition-all duration-300 overflow-auto p-6  main-content">
       <slot />
     </div>
   </div>
