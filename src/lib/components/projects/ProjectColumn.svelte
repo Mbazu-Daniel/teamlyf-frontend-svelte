@@ -6,11 +6,11 @@
   export let bgColor;
 </script>
 
-<div class="bg-blue-800 w-full p-4">
+<div class={`w-full min-h-screen ${bgColor} p-4 rounded-t-3xl overflow-x-auto`}>
   <div
-    class={`text-lg font-semibold mb-4 ${bgColor} p-2 rounded-md text-white`}
+    class={`text-lg font-semibold mb-4 p-2 rounded-md text-white shadow-md capitalize ${bgColor}/50  `}
   >
-    {title} <span class="text-sm">({count})</span>
+    {title} <span class="text-base bg-red-200 px-2 rounded">{count}</span>
   </div>
   <div class="space-y-4">
     {#each projects as project}
@@ -23,7 +23,8 @@
         comments={project.comments}
         attachments={project.attachments}
         priority={project.priority}
-        imageUrl={project.imageUrl}
+        thumbnailImage={project.thumbnailImage}
+        {bgColor}
       />
     {/each}
   </div>
