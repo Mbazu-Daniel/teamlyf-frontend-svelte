@@ -32,7 +32,7 @@
 </script>
 
 <div
-  class="flex flex-col w-[265px] rounded-3xl shadow-lg mb-4 relative"
+  class="flex flex-col w-[265px] rounded-3xl shadow-lg mb-4 relative cursor-pointer"
   style="background-color: {bgColorOpacity};"
 >
   <div class="flex justify-center w-full">
@@ -44,7 +44,7 @@
   </div>
   <div class="p-4 bg-white w-[265px] rounded-3xl -mt-16">
     <div class="flex justify-between items-center mb-2">
-      <h3 class="text-lg font-medium font-satoshi mb-2">{title}</h3>
+      <h3 class="text-lg font-medium font-satoshi mb-2 text-gray-900 capitalize">{title}</h3>
       <span
         class={`text-sm px-2 py-1 rounded flex items-center ${priorityBgColor}`}
         style="color: {priorityColor};"

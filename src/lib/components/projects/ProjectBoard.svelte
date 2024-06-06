@@ -23,7 +23,7 @@
       {
         title: "Grandida",
         tags: "Solidity",
-        progress: 42,
+        progress: 25,
         date: "17 Aug 2023",
         members: ["../../images/profile-3.jpg", "../../images/profile-4.jpg"],
         comments: 11,
@@ -65,7 +65,7 @@
       {
         title: "Grandida",
         tags: "Solidity",
-        progress: 42,
+        progress: 70,
         date: "17 Aug 2023",
         members: ["../../images/profile-3.jpg", "../../images/profile-4.jpg"],
         comments: 11,
@@ -78,7 +78,7 @@
       {
         title: "Grandida",
         tags: "Solidity",
-        progress: 42,
+        progress: 100,
         date: "17 Aug 2023",
         members: ["../../images/profile-3.jpg", "../../images/profile-4.jpg"],
         comments: 11,
@@ -104,7 +104,7 @@
       {
         title: "Grandida",
         tags: "Solidity",
-        progress: 42,
+        progress: 0,
         date: "17 Aug 2023",
         members: ["../../images/profile-3.jpg", "../../images/profile-4.jpg"],
         comments: 11,
@@ -115,7 +115,7 @@
       {
         title: "Grandida",
         tags: "Solidity",
-        progress: 42,
+        progress: 0,
         date: "17 Aug 2023",
         members: ["../../images/profile-3.jpg", "../../images/profile-4.jpg"],
         comments: 11,
@@ -126,7 +126,7 @@
       {
         title: "Grandida",
         tags: "Solidity",
-        progress: 42,
+        progress: 0,
         date: "17 Aug 2023",
         members: ["../../images/profile-3.jpg", "../../images/profile-4.jpg"],
         comments: 11,

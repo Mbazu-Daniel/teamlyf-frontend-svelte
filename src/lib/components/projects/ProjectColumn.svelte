@@ -8,7 +8,7 @@
 
 <div class={`w-full min-h-screen ${bgColor} p-4 rounded-t-3xl overflow-x-auto`}>
   <div
-    class={`text-lg font-semibold mb-4 p-2 rounded-md text-white shadow-md ${bgColor}/50`}
+    class={`text-lg font-semibold mb-4 p-2 rounded-md text-white shadow-md capitalize ${bgColor}/50  `}
   >
     {title} <span class="text-base bg-red-200 px-2 rounded">{count}</span>
   </div>
