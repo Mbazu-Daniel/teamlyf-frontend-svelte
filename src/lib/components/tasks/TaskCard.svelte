@@ -35,13 +35,13 @@
 >
   <div class="p-4 w-full rounded-3xl">
     <div class="flex justify-between items-center mb-4">
-      <h3 class="text-md font-medium text-gray-900 font-satoshi capitalize">
+      <h3 class="text-md font-medium text-gray-900 font-satoshi">
         {title}
       </h3>
     </div>
     <!-- <h4 class="capitalize text-sm text-gray-500 py-2 -mt-2">Project Name</h4> -->
 
-    <h3 class="text-lg font-bold font-satoshi mb-3 text-gray-700">
+    <h3 class="text-lg font-bold font-satoshi mb-3 text-gray-700 capitalize">
       {projectName}
     </h3>
 
@@ -80,7 +80,7 @@
     </div> -->
     <div class="mt-4 flex justify-start">
       <button
-        class="bg-gray-200 rounded-full px-2 py-1 text-sm text-gray-600 flex items-center"
+        class="bg-gray-200 rounded-full px-2 py-1 text-sm text-gray-600 flex items-center capitalize"
       >
         <img src="../../images/subtasks.svg" alt="" class="w-6 h-6 mr-2" />
         Add subtask
