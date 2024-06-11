@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
+  import TaskModal from "./TaskModal.svelte";
+  import { onMount } from "svelte";
   let tasks = [
     {
-      taskName: "Create 3 layout examples for the desktop homepage",
+      taskId: "byt00001",
+      taskName: "Task management dashboard design",
       project: "ByteVibez",
+      description:
+        "Design the dashboard for task management for users, this should include categories like to-do task, in progress, on hold and completed tasks",
       assignees: [
         "../../images/profile-1.jpg",
         "../../images/profile-3.jpg",
@@ -11,12 +16,15 @@
       date: "17 Aug 2023",
       comments: 5,
       attachments: 3,
-        priority: "Low Priority",
+      priority: "Low Priority",
       status: "In Review",
     },
     {
+      taskId: "byt00002",
       taskName: "Create 3 layout examples for the desktop homepage",
-      project: "ByteVibez",
+      project: "Grandida",
+      description:
+        "Design the dashboard for task management for users, this should include categories like to-do task, in progress, on hold and completed tasks",
       assignees: [
         "../../images/profile-1.jpg",
         "../../images/profile-3.jpg",
@@ -25,12 +33,15 @@
       date: "17 Aug 2023",
       comments: 5,
       attachments: 3,
-        priority: "Low Priority",
+      priority: "Low Priority",
       status: "In Review",
     },
     {
+      taskId: "byt00003",
       taskName: "Create 3 layout examples for the desktop homepage",
       project: "ByteVibez",
+      description:
+        "Design the dashboard for task management for users, this should include categories like to-do task, in progress, on hold and completed tasks",
       assignees: [
         "../../images/profile-1.jpg",
         "../../images/profile-3.jpg",
@@ -41,11 +52,21 @@
       date: "17 Aug 2023",
       comments: 5,
       attachments: 3,
-        priority: "Low Priority",
+      priority: "Low Priority",
       status: "In Review",
     },
     // Add more task objects as needed
   ];
+
+  let selectedTask = null;
+
+  function openTaskModal(task) {
+    selectedTask = task;
+  }
+
+  function closeTaskModal() {
+    selectedTask = null;
+  }
 </script>
 
 <table class="min-w-full bg-white">
@@ -82,7 +103,10 @@
   </thead>
   <tbody>
     {#each tasks as task}
-      <tr class="border-b border-gray-200">
+      <tr
+        class="border-b border-gray-200 cursor-pointer"
+        on:click={() => openTaskModal(task)}
+      >
         <td class="py-4 px-4 text-sm text-gray-800">{task.taskName}</td>
         <td class="py-4 px-4 text-sm text-gray-800">{task.project}</td>
         <td class="py-4 px-4 text-sm text-gray-800">
@@ -101,11 +125,15 @@
             {/if}
           </div>
         </td>
-          <td class="py-4 px-4 text-sm text-gray-800">{task.priority}</td>
-            <td class="py-4 px-4 text-sm text-gray-800">{task.status}</td>
+        <td class="py-4 px-4 text-sm text-gray-800">{task.priority}</td>
+        <td class="py-4 px-4 text-sm text-gray-800">{task.status}</td>
         <td class="py-4 px-4 text-sm text-gray-800 w-[125px]">
-          <div class="flex items-center bg-blue-100 py-1 px-2 rounded-3xl ">
-            <img src="../../images/clock.svg" alt="Due date" class="w-6 h-6 mr-2" />
+          <div class="flex items-center bg-blue-100 py-1 px-2 rounded-3xl">
+            <img
+              src="../../images/clock.svg"
+              alt="Due date"
+              class="w-6 h-6 mr-2"
+            />
             <span>{task.date}</span>
           </div>
         </td>
@@ -117,7 +145,6 @@
                 alt="Subtasks"
                 class="w-6 h-6"
               />
-            
             </span>
             <span class="flex items-center">
               <img
@@ -147,3 +174,7 @@
     {/each}
   </tbody>
 </table>
+
+{#if selectedTask}
+  <TaskModal task={selectedTask} on:close={closeTaskModal} />
+{/if}
