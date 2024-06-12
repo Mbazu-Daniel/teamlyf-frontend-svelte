@@ -4,7 +4,6 @@
   import * as Avatar from "$lib/components/ui/avatar";
   import { onMount } from "svelte";
 
-
   const dispatch = createEventDispatcher();
   export let task = null;
 
@@ -27,6 +26,9 @@
       icon: "../../icons/check.svg",
     },
   ];
+  let statusColor =
+    statuses.find((status) => status.label === task.status)?.color ||
+    "bg-gray-500";
 
   function closeModal() {
     dispatch("close");
@@ -59,6 +61,7 @@
 
   function updateStatus(status) {
     task.status = status.label;
+    statusColor = status.color;
   }
 
   onMount(() => {
@@ -117,7 +120,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-[1fr_538px] h-full">
       <div class="p-8 m-6">
         <div class="flex items-center">
           <span class="flex items-center bg-gray-100 py-2 px-2 rounded-l-3xl">
@@ -129,7 +132,7 @@
             <h3 class="text-xl font-bold text-gray-500 pr-4">{task.project}</h3>
           </span>
           <h3
-            class="text-xl font-bold text-gray-500 bg-purple-100 py-2.5 px-2 rounded-r-3xl"
+            class="text-xl font-bold text-gray-500 bg-[#F6F6FF] py-2.5 px-2 rounded-r-3xl"
           >
             {task.taskId}
           </h3>
@@ -138,7 +141,7 @@
           <h2 class="text-primary text-4xl font-bold">{task.taskName}</h2>
         </div>
 
-        <div class="bg-purple-100 border border-solid p-2 rounded-xl mt-4">
+        <div class="bg-[#F6F6FF] border border-solid p-2 rounded-xl mt-4">
           {#if editingDescription}
             <textarea
               bind:this={descriptionElement}
@@ -148,7 +151,7 @@
           {:else}
             <div class="flex items-center">
               <p
-                class="text-base text-gray-600 cursor-pointer flex-1"
+                class="text-sm text-gray-600 cursor-pointer flex-1"
                 on:click={startEditing}
               >
                 {expandedDescription
@@ -167,9 +170,55 @@
         </div>
 
         <div class="py-4">
-          <div class="mb-4">
-            <p class="text-base text-gray-600">Status:</p>
+          <div class="mb-4 flex items-center space-x-10">
+            <p class="text-base font-bold text-gray-800">Status:</p>
             <DropdownMenu.Root>
+              <DropdownMenu.Trigger>
+                <div class="flex items-center">
+                  <span
+                    class={`inline-flex items-center px-4 py-2 text-white rounded-l-xl focus:outline-none uppercase font-bold ${statusColor}`}
+                  >
+                    {task.status}
+                  </span>
+                  <span
+                    class={`flex items-center rounded-r-xl cursor-pointer ${statusColor}`}
+                  >
+                    <svg
+                      class="w-10 h-10"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        opacity="0.01"
+                        d="M2.5 12C2.5 7.52166 2.5 5.28249 3.89124 3.89124C5.28249 2.5 7.52166 2.5 12 2.5C16.4783 2.5 18.7175 2.5 20.1088 3.89124C21.5 5.28249 21.5 7.52166 21.5 12C21.5 16.4783 21.5 18.7175 20.1088 20.1088C18.7175 21.5 16.4783 21.5 12 21.5C7.52166 21.5 5.28249 21.5 3.89124 20.1088C2.5 18.7175 2.5 16.4783 2.5 12Z"
+                        fill="#D9D9D9"
+                      />
+                      <path
+                        d="M17 10C17 10 13.3176 14 12 14C10.6824 14 7 10 7 10"
+                        stroke="#FFF"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </DropdownMenu.Trigger>
+
+              <DropdownMenu.Content class="mt-2 bg-white shadow-lg rounded-lg">
+                {#each statuses as status}
+                  <DropdownMenu.Item
+                    on:click={() => updateStatus(status)}
+                    class="flex items-center space-x-2 py-2 px-4 hover:bg-gray-100 cursor-pointer"
+                  >
+                    <span class={`w-4 h-4 ${status.color} rounded-full`}></span>
+                    <span>{status.label}</span>
+                  </DropdownMenu.Item>
+                {/each}
+              </DropdownMenu.Content>
             </DropdownMenu.Root>
           </div>
           <div class="mb-4">
@@ -229,7 +278,7 @@
         </div>
       </div>
 
-      <div class="bg-purple-100"></div>
+      <div class="bg-[#F6F6FF]"></div>
     </div>
   </div>
 </div>

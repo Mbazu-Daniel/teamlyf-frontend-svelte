@@ -17,7 +17,7 @@
       comments: 5,
       attachments: 3,
       priority: "Low Priority",
-      status: "In Review",
+      status: "Completed",
     },
     {
       taskId: "byt00002",
