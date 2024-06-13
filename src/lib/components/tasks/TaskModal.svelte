@@ -26,6 +26,24 @@
       icon: "../../icons/check.svg",
     },
   ];
+  const priorities = [
+    {
+      label: "High Priority",
+      color: "bg-purple-500",
+      icon: "../../icons/check.svg",
+    },
+    {
+      label: "Low Priority",
+      color: "bg-yellow-500",
+      icon: "../../icons/check.svg",
+    },
+    { label: "On hold", color: "bg-red-500", icon: "../../icons/check.svg" },
+    {
+      label: "Completed",
+      color: "bg-green-500",
+      icon: "../../icons/check.svg",
+    },
+  ];
   let statusColor =
     statuses.find((status) => status.label === task.status)?.color ||
     "bg-gray-500";
@@ -169,8 +187,8 @@
           {/if}
         </div>
 
-        <div class="py-4">
-          <div class="mb-4 flex items-center space-x-10">
+        <div class="py-6">
+          <div class="mb-6 flex items-center space-x-10">
             <p class="text-base font-bold text-gray-800">Status:</p>
             <DropdownMenu.Root>
               <DropdownMenu.Trigger>
@@ -221,36 +239,74 @@
               </DropdownMenu.Content>
             </DropdownMenu.Root>
           </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-600">Assignee:</p>
-            <div class="flex items-center">
-              {#each task.assignees as assignee}
+          <div class="mb-6 flex items-center space-x-8">
+            <p class="text-base font-bold text-gray-800">Assignee:</p>
+            <div class="flex items-center bg-gray-200 p-2 rounded-full">
+              {#each task.assignees.slice(0, 3) as assignee}
                 <img
                   src={assignee}
                   alt="Assignee"
-                  class="w-8 h-8 rounded-full border-2 border-white -ml-2"
+                  class="w-8 h-8 rounded-full border-2 border-white cursor-pointer"
                 />
               {/each}
+              {#if task.assignees.length > 3}
+                <span class="ml-2 text-gray-800"
+                  >+{task.assignees.length - 3}</span
+                >
+              {/if}
             </div>
           </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-600">Due Date:</p>
-            <div class="flex items-center bg-blue-100 py-1 px-2 rounded-3xl">
+          <div class="mb-6 flex items-center space-x-6">
+            <p class="text-base font-bold text-gray-800">Due Date:</p>
+            <div class="flex items-center bg-blue-100 p-2 rounded-3xl">
               <img
                 src="../../images/clock.svg"
                 alt="Due date"
                 class="w-6 h-6 mr-2"
               />
-              <span>{task.date}</span>
+              <span class="text-blue-800">{task.date} </span>
+              <!-- if there is reminder time set this will show -->
+              {#if task.reminderDate != null}
+                <span class="text-blue-800">| {task.reminderDate}</span>
+              {/if}
             </div>
           </div>
-          <div class="mb-4">
-            <p class="text-sm text-gray-600">Priority:</p>
-            <p class="font-medium">{task.priority}</p>
+          <div class="mb-6 flex items-center space-x-10">
+            <p class="text-base font-bold text-gray-800">Priority:</p>
+            <div class="flex items-center bg-blue-100 p-2 rounded-3xl">
+              <svg
+                class="mr-2"
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.33203 3.43262C1.33203 2.90218 1.54274 2.39348 1.91782 2.0184C2.29289 1.64333 2.8016 1.43262 3.33203 1.43262H7.4467C7.97686 1.43291 8.48521 1.64368 8.86003 2.01862L14.1934 7.35195C14.5683 7.72701 14.7789 8.23562 14.7789 8.76595C14.7789 9.29628 14.5683 9.8049 14.1934 10.18L10.08 14.2946C9.89431 14.4804 9.67382 14.6277 9.43114 14.7283C9.18847 14.8288 8.92837 14.8805 8.6657 14.8805C8.40303 14.8805 8.14293 14.8288 7.90025 14.7283C7.65758 14.6277 7.43709 14.4804 7.25136 14.2946L1.91803 8.96128C1.54293 8.5863 1.33214 8.07767 1.33203 7.54728V3.43262ZM4.66536 4.09928C4.48855 4.09928 4.31898 4.16952 4.19396 4.29455C4.06894 4.41957 3.9987 4.58914 3.9987 4.76595C3.9987 4.94276 4.06894 5.11233 4.19396 5.23735C4.31898 5.36238 4.48855 5.43262 4.66536 5.43262C4.84218 5.43262 5.01241 5.36238 5.13744 5.23735C5.26246 5.11233 5.3327 4.94276 5.3327 4.76595C5.3327 4.58914 5.26246 4.41957 5.13744 4.29455C5.01241 4.16952 4.84218 4.09928 4.66536 4.09928Z"
+                  fill="#EB5757"
+                />
+              </svg>
+
+              <span class="text-blue-800">{task.priority} </span>
+              <!-- if there is reminder time set this will show -->
+              {#if task.reminderDate != null}
+                <span class="text-blue-800">| {task.reminderDate}</span>
+              {/if}
+            </div>
           </div>
         </div>
         <div>
-          <h3 class="text-lg font-semibold mb-2">Subtasks</h3>
+          <div class="flex justify-between">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Subtasks</h3>
+            <img
+              src="../../navbar/add-square.svg"
+              alt="add new subtask"
+              class="w-8 h-8"
+            />
+          </div>
           <ul>
             <li class="flex items-center mb-2">
               <input type="checkbox" class="mr-2" />
@@ -261,7 +317,15 @@
               <span>Dark mode</span>
             </li>
           </ul>
-          <h3 class="text-lg font-semibold mb-2">Attachments</h3>
+
+          <div class="flex justify-between">
+            <h3 class="text-2xl font-bold text-gray-900 mb-2">Attachments</h3>
+            <img
+              src="../../navbar/add-square.svg"
+              alt="add attachment to task"
+              class="w-8 h-8"
+            />
+          </div>
           <ul>
             <li class="flex items-center mb-2">
               <input type="checkbox" class="mr-2" />
@@ -269,16 +333,13 @@
             </li>
           </ul>
         </div>
-
-        <div class="p-4 border-t">
-          <button
-            on:click={closeModal}
-            class="bg-blue-500 text-white px-4 py-2 rounded-md">Close</button
-          >
-        </div>
       </div>
 
-      <div class="bg-[#F6F6FF]"></div>
+      <div class="bg-[#F6F6FF]">
+        <div>
+          <h1>Hello world</h1>
+        </div>
+      </div>
     </div>
   </div>
 </div>

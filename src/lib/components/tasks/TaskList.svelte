@@ -12,6 +12,8 @@
         "../../images/profile-1.jpg",
         "../../images/profile-3.jpg",
         "../../images/profile-2.jpg",
+        "../../images/profile-3.jpg",
+        "../../images/profile-2.jpg",
       ],
       date: "17 Aug 2023",
       comments: 5,
@@ -31,7 +33,7 @@
         "../../images/profile-2.jpg",
       ],
       date: "17 Aug 2023",
-      comments: 5,
+      comments: 5, 
       attachments: 3,
       priority: "Low Priority",
       status: "In Review",
@@ -54,6 +56,7 @@
       attachments: 3,
       priority: "Low Priority",
       status: "In Review",
+      reminderDate: "10:45pm"
     },
     // Add more task objects as needed
   ];
@@ -115,7 +118,7 @@
               <img
                 src={assignee}
                 alt="Assignee"
-                class="w-6 h-6 rounded-full border-2 border-white -ml-2"
+                class="w-8 h-8 rounded-full border-2 border-white -ml-2"
               />
             {/each}
             {#if task.assignees.length > 3}
