@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navbar from "$lib/components/shared/Navbar.svelte";
   import LeftSideBar from "$lib/components/shared/LeftSideBar.svelte";
+  import Chat from '$lib/components/chats/DirectMessage.svelte'
   import "../../../app.css";
 </script>
 
@@ -20,6 +21,7 @@
     <!-- Main Content -->
     <div class="flex-1 ml-[265px] transition-all duration-300 overflow-auto p-6  main-content">
       <slot />
+      <Chat/>
     </div>
   </div>
 </div>

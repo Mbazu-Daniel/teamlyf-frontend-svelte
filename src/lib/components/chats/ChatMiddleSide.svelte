@@ -2,6 +2,20 @@
   import Message from "./Message.svelte";
   import { writable } from "svelte/store";
 
+  export let direct
+  // export let updateState;
+
+  // function handleChange(event) {
+  //   updateState(event.target.value);
+  // }
+
+  // let message;
+  // if (direct === false) {
+  //   message = 'false'
+  // } else {
+  //   message = 'true'
+  // }
+
   let msg = writable("");
 
   const handleMsgChange = (event) => {
@@ -81,7 +95,7 @@
   >
 
   <div class="h-[79%] p-7 overflow-y-auto bg-scroll w-full">
-    <Message dest="send" msg="Hi" time="10.20" />
+    <Message dest="send" msg={direct ? 'true' : 'false'} time="10.20" />
     <Message
       dest="recieve"
       msg="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium assumenda, soluta temporibus quibusdam, modi quo illo suscipit nostrum ad quae dicta nemo blanditiis, vel praesentium quia. Odio at quaerat minus?"
