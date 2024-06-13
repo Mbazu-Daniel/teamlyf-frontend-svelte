@@ -1,13 +1,7 @@
-<script lang="ts">
-  import TaskModal from "./TaskModal.svelte";
-  import { onMount } from "svelte";
-  let tasks = [
+<script>
+  let projects = [
     {
-      taskId: "byt00001",
-      taskName: "Task management dashboard design",
-      project: "ByteVibez",
-      description:
-        "Design the dashboard for task management for users, this should include categories like to-do task, in progress, on hold and completed tasks",
+      title: "ByteVibez",
       assignees: [
         "../../images/profile-1.jpg",
         "../../images/profile-3.jpg",
@@ -20,11 +14,7 @@
       status: "In Review",
     },
     {
-      taskId: "byt00002",
-      taskName: "Create 3 layout examples for the desktop homepage",
-      project: "Grandida",
-      description:
-        "Design the dashboard for task management for users, this should include categories like to-do task, in progress, on hold and completed tasks",
+      title: "ByteVibez",
       assignees: [
         "../../images/profile-1.jpg",
         "../../images/profile-3.jpg",
@@ -33,15 +23,12 @@
       date: "17 Aug 2023",
       comments: 5,
       attachments: 3,
-      priority: "Low Priority",
-      status: "In Review",
+        priority: "Low Priority",
+        status: "In Review",
+  
     },
     {
-      taskId: "byt00003",
-      taskName: "Create 3 layout examples for the desktop homepage",
-      project: "ByteVibez",
-      description:
-        "Design the dashboard for task management for users, this should include categories like to-do task, in progress, on hold and completed tasks",
+      title: "ByteVibez",
       assignees: [
         "../../images/profile-1.jpg",
         "../../images/profile-3.jpg",
@@ -52,21 +39,11 @@
       date: "17 Aug 2023",
       comments: 5,
       attachments: 3,
-      priority: "Low Priority",
-      status: "In Review",
+        priority: "Low Priority",
+        status: "In Review",
     },
-    // Add more task objects as needed
+    // Add more project objects as needed
   ];
-
-  let selectedTask = null;
-
-  function openTaskModal(task) {
-    selectedTask = task;
-  }
-
-  function closeTaskModal() {
-    selectedTask = null;
-  }
 </script>
 
 <table class="min-w-full bg-white">
@@ -74,13 +51,9 @@
     <tr class="bg-gray-100">
       <th
         class="py-2 px-4 border-b-2 border-gray-200 text-left text-base font-semibold text-gray-600"
-        >Task Name</th
+        >Project Name</th
       >
-      <th
-        class="py-2 px-4 border-b-2 border-gray-200 text-left text-base font-semibold text-gray-600"
-        >Project</th
-      >
-      <th
+        <th
         class="py-2 px-4 border-b-2 border-gray-200 text-left text-base font-semibold text-gray-600"
         >Assignee</th
       >
@@ -92,6 +65,7 @@
         class="py-2 px-4 border-b-2 border-gray-200 text-left text-base font-semibold text-gray-600"
         >Status</th
       >
+    
       <th
         class="py-2 px-4 border-b-2 border-gray-200 text-left text-base font-semibold text-gray-600"
         >Due Date</th
@@ -102,31 +76,28 @@
     </tr>
   </thead>
   <tbody>
-    {#each tasks as task}
-      <tr
-        class="border-b border-gray-200 cursor-pointer"
-        on:click={() => openTaskModal(task)}
-      >
-        <td class="py-4 px-4 text-sm text-gray-800">{task.taskName}</td>
-        <td class="py-4 px-4 text-sm text-gray-800">{task.project}</td>
+    {#each projects as project}
+      <tr class="border-b border-gray-200">
+        <td class="py-4 px-4 text-sm text-gray-800">{project.title}</td>
+
         <td class="py-4 px-4 text-sm text-gray-800">
           <div class="flex items-center">
-            {#each task.assignees.slice(0, 3) as assignee}
+            {#each project.assignees.slice(0, 3) as assignee}
               <img
                 src={assignee}
                 alt="Assignee"
                 class="w-6 h-6 rounded-full border-2 border-white -ml-2"
               />
             {/each}
-            {#if task.assignees.length > 3}
+            {#if project.assignees.length > 3}
               <span class="ml-2 text-gray-500"
-                >+{task.assignees.length - 3}</span
+                >+{project.assignees.length - 3}</span
               >
             {/if}
           </div>
         </td>
-        <td class="py-4 px-4 text-sm text-gray-800">{task.priority}</td>
-        <td class="py-4 px-4 text-sm text-gray-800">{task.status}</td>
+        <td class="py-4 px-4 text-sm text-gray-800">{project.priority}</td>
+        <td class="py-4 px-4 text-sm text-gray-800">{project.status}</td>
         <td class="py-4 px-4 text-sm text-gray-800 w-[125px]">
           <div class="flex items-center bg-blue-100 py-1 px-2 rounded-3xl">
             <img
@@ -134,7 +105,7 @@
               alt="Due date"
               class="w-6 h-6 mr-2"
             />
-            <span>{task.date}</span>
+            <span>{project.date}</span>
           </div>
         </td>
         <td class="py-4 px-4 text-sm text-gray-800">
@@ -142,7 +113,7 @@
             <span class="flex items-center bg-gray-300 rounded-3xl p-1">
               <img
                 src="../../images/subtasks.svg"
-                alt="Subtasks"
+                alt="Sub projects"
                 class="w-6 h-6"
               />
             </span>
@@ -152,7 +123,7 @@
                 alt="Comments"
                 class="w-7 h-7"
               />
-              {task.comments}
+              {project.comments}
             </span>
             <span class="flex items-center">
               <img
@@ -160,7 +131,7 @@
                 alt="Attachments"
                 class="w-6 h-6"
               />
-              {task.attachments}
+              {project.attachments}
             </span>
             <button class="px-2 py-1 bg-primary text-white rounded-md">✓</button
             >
@@ -174,7 +145,3 @@
     {/each}
   </tbody>
 </table>
-
-{#if selectedTask}
-  <TaskModal task={selectedTask} on:close={closeTaskModal} />
-{/if}
