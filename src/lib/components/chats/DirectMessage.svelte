@@ -3,6 +3,7 @@
     import ChatLeftSide from "./ChatLeftSide.svelte";
     import ChatMiddleSide from "./ChatMiddleSide.svelte"
     import ChatRightSide from "./ChatRightSide.svelte"
+    // import C from "./ScheduleMeeting.svelte"
     
     export let direct = false;
     function updateState(newValue) {
@@ -14,5 +15,6 @@
   <div class='flex flex-row justify-center my-8 z-10 w-full'>
     <ChatLeftSide {direct} {updateState}/>
     <ChatMiddleSide {direct} />
-    <ChatRightSide />
+    <ChatRightSide {direct}/>
+    <!-- <C /> -->
   </div>
