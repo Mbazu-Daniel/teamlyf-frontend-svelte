@@ -4,7 +4,7 @@
 
 {#if direct === false}
 <div
-  class="bg-white h-[849px] px-4 py-5 w-[335px] rounded-[6px] mr-4 mb-2 flex-25"
+  class="bg-white h-[849px] px-4 py-5 w-full max-w-[332px] rounded-[6px] mr-4 mb-2 flex-25"
 >
   <div class="flex flex-col items-center justify-center gap-2">
     <img

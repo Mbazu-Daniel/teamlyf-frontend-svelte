@@ -10,10 +10,10 @@
     direct = newValue;
   }
 </script>
-
+<!-- add w-full to all sides -->
 <div class="flex flex-row w-full">
   <ChatLeftSide {direct} {updateState} />
   <ChatMiddleSide {direct} />
-  <ChatRightSide {direct} />
+  <!-- <ChatRightSide {direct} /> -->
   <!-- <C /> -->
 </div>

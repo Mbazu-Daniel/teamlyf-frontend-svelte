@@ -46,14 +46,14 @@
     <div
       class="flex flex-row items-center pl-1 pb-6 pt-4 w-[260px] h-[30px] gap-2 border-b-2 border-gray-300 mt-2"
     >
-      <p
+      <!-- <p
         class="text-[10px] pl-7 pt-[8px] leading-5 w-[248px] h-[30px] text-[#828282]"
       >
         lorem sghflk hghrguv jlaghunlkc adkflhanjdmfbvln lorem
-      </p>
+      </p> -->
     </div>
   </div>
-  <div class="gap-2 w-[276px] h-[110px] px-2 py-4">
+  <!-- <div class="gap-2 w-[276px] h-[110px] px-2 py-4">
     <div class="flex flex-row items-center justify-between mt-2 w-[260px] h-10">
       <img
         src="/images/profile-1.jpg"
@@ -102,7 +102,7 @@
         lorem sghflk hghrguv jlaghunlkc adkflhanjdmfbvln lorem
       </p>
     </div>
-  </div>
+  </div> -->
 </div>
 
 <style>
