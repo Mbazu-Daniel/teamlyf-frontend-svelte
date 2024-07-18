@@ -7,6 +7,11 @@
  
    let isCollapsed = false;
 
+  function toggleSidebar() {
+    isCollapsed = !isCollapsed;
+    // adjustMainMargin();
+  }
+
 injectSpeedInsights();
 </script>
 
