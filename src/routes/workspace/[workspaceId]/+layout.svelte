@@ -22,7 +22,7 @@ injectSpeedInsights();
   <!-- Sidebar and Main Content -->
   <div class="flex pt-16 w-full">
     <!-- Left Sidebar -->
-      <LeftSideBar />
+      <LeftSideBar {isCollapsed} {toggleSidebar}  />
 
     <!-- Main Content -->
     <div class="flex-1 ml-[265px] transition-all duration-300  p-6  main-content">
