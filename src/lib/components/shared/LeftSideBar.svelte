@@ -1,9 +1,9 @@
 <script lang="ts">
   import SidebarMenu from "./LeftSideBar/SidebarMenu.svelte";
   import SidebarBottom from "./LeftSideBar/SidebarBottom.svelte";
-  import SidebarRoom from "./LeftSideBar/SidebarRoom.svelte";
+  // import SidebarRoom from "./LeftSideBar/SidebarRoom.svelte";
   import * as Avatar from "$lib/components/ui/avatar";
-  import { onMount } from "svelte";
+  // import { onMount } from "svelte";
 
   export let isCollapsed:boolean;
   export let toggleSidebar:()=>void
@@ -46,7 +46,7 @@
     </header>
 
     <SidebarMenu {isCollapsed} />
-    <SidebarRoom {isCollapsed} />
+    <!-- <SidebarRoom {isCollapsed} /> -->
     <div class="mt-auto">
       <SidebarBottom {isCollapsed} />
     </div>
