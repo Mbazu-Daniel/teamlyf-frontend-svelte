@@ -25,7 +25,6 @@ injectSpeedInsights();
       <LeftSideBar {isCollapsed} {toggleSidebar}  />
 
     <!-- Main Content -->
-    <div class="flex-1 ml-[265px] transition-all duration-300  p-6  main-content">
     <div class={`${isCollapsed ? "pl-28": "pl-[281px]" } flex-1 py-8 pr-4 transition-all duration-300 overflow-hidden bg-white` }>
       <slot />
 
