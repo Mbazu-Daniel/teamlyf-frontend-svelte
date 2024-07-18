@@ -1,6 +1,7 @@
 <script lang="ts">
   import Navbar from "$lib/components/shared/Navbar.svelte";
   import LeftSideBar from "$lib/components/shared/LeftSideBar.svelte";
+  
   import "../../../app.css";
   import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
  
@@ -23,6 +24,7 @@ injectSpeedInsights();
     <!-- Main Content -->
     <div class="flex-1 ml-[265px] transition-all duration-300  p-6  main-content">
       <slot />
+
     </div>
   </div>
 </div>

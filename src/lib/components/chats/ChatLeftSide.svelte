@@ -3,14 +3,15 @@
   import Team from "./Team.svelte";
   import Chats from "./Chats.svelte";
 
-  let direct = false;
+  export let direct
+  export let updateState
 
   const handleClick = (check) => {
-    direct = check;
+    updateState(check)
   };
 </script>
 
-<div class="bg-white p-4 w-[324px] rounded-[6px] mr-4 h-[849px] flex-25">
+<div class="bg-white p-4 w-full max-w-[324px] rounded-[6px] h-[849px] flex-25">
   <div class="h-9 w-[68px]">
     <p class="text-2xl font-bold leading-9">Chats</p>
   </div>
