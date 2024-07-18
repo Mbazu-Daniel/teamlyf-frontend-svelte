@@ -5,7 +5,7 @@
   import * as Avatar from "$lib/components/ui/avatar";
   import { onMount } from "svelte";
 
-  let isCollapsed = false;
+  export let isCollapsed:boolean;
 
   function toggleSidebar() {
     isCollapsed = !isCollapsed;
