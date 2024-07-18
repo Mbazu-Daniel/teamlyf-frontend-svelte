@@ -5,27 +5,24 @@
   import * as Avatar from "$lib/components/ui/avatar";
   import { onMount } from "svelte";
 
-  let isCollapsed = false;
+  export let isCollapsed:boolean;
+  export let toggleSidebar:()=>void
 
-  function toggleSidebar() {
-    isCollapsed = !isCollapsed;
-    adjustMainMargin();
-  }
 
-  function adjustMainMargin() {
-    const mainContent = document.querySelector(".main-content") as HTMLElement;
-    if (mainContent) {
-      mainContent.style.marginLeft = isCollapsed ? "48px" : "265px";
-    }
-  }
-
-  onMount(() => {
-    adjustMainMargin();
-  });
+  // function adjustMainMargin() {
+  //   const mainContent = document.querySelector(".main-content") as HTMLElement;
+  //   if (mainContent) {
+  //     mainContent.style.marginLeft = isCollapsed ? "48px" : "265px";
+  //   }
+  // }
+  //
+  // onMount(() => {
+  //   adjustMainMargin();
+  // });
 </script>
 
 <div
-  class={`bg-sidebar py-4 px-6 h-full ${isCollapsed ? "w-24" : "w-[265px]"} transition-all duration-300`}
+  class={`fixed bg-sidebar py-4 px-6 h-full ${isCollapsed ? "w-24" : "w-[265px]"} transition-all duration-300`}
 >
   <div class="relative h-full flex flex-col">
     <header class="flex items-center justify-between py-4 pr-6">
@@ -56,7 +53,7 @@
 
     <button
       class="absolute top-4 -right-4 w-10 bg-primary rounded-full transform transition-transform duration-300"
-      on:click={toggleSidebar}
+      on:click={()=>toggleSidebar()}
       aria-label="Toggle Sidebar"
     >
       <img
