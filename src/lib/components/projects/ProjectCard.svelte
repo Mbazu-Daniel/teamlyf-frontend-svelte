@@ -1,14 +1,15 @@
 <script lang="ts">
-  export let title;
-  export let tags;
-  export let progress;
-  export let date;
-  export let members;
-  export let comments;
-  export let attachments;
-  export let priority;
-  export let thumbnailImage;
-  export let bgColor;
+	import * as Avatar from '$lib/components/ui/avatar';
+	export let title;
+	export let tags;
+	export let progress;
+	export let date;
+	export let members;
+	export let comments;
+	export let attachments;
+	export let priority;
+	export let thumbnailImage;
+	export let bgColor;
 
   let priorityColor;
   let priorityBgColor;
