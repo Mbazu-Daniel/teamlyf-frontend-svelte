@@ -35,13 +35,6 @@
 <div
 	class="flex flex-col w-[95%] bg-[#f2f2f2] mx-auto rounded-3xl shadow-lg relative cursor-pointer"
 >
-  <div class="flex justify-center w-full">
-    <img
-      src={thumbnailImage}
-      alt=""
-      class="w-[233px] h-[150px] object-cover rounded-t-lg mt-4"
-    />
-  </div>
   <div class="p-4 bg-white w-[265px] rounded-3xl -mt-16">
     <div class="flex justify-between items-center mb-2">
       <h3 class="text-lg font-medium font-satoshi mb-2 text-gray-900 capitalize">{title}</h3>
@@ -79,6 +72,10 @@
           style="width: {progress}%; background: linear-gradient(90deg, rgba(235,19,6,1) 33%, rgba(255,244,15,1) 66%, rgba(0,255,102,0.989233193277311) 100%);"
         ></div>
       </div>
+	<Avatar.Root class="w-[200px] h-[150px] mx-auto mt-4 rounded-lg ring ring-white z-10">
+		<Avatar.Image src={thumbnailImage} alt="Avatar" class="w-full h-full object-cover" />
+		<Avatar.Fallback class="font-bold capitalize text-[4rem] text-dark">CN</Avatar.Fallback>
+	</Avatar.Root>
 
 			<div class="text-sm text-gray-500 mt-1 text-right">{progress}%</div>
 		</div>
