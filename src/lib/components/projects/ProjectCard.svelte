@@ -80,40 +80,34 @@
         ></div>
       </div>
 
-      <div class="text-sm text-gray-500 mt-1 text-right">{progress}%</div>
-    </div>
-    <div class="flex justify-between items-center mb-4 -mt-1">
-      <span
-        class="text-sm text-gray-500 flex items-center bg-blue-100 py-1 px-2 rounded-3xl"
-      >
-        <span class="mr-2">
-          <img src="../../images/clock.svg" alt="" class="w-6 h-6" />
-        </span>{date}
-      </span>
-    </div>
-    <div class="flex justify-between text-sm text-gray-500">
-      <div class="flex items-center">
-        {#each members.slice(0, 3) as member}
-          <img
-            src={member}
-            alt=""
-            class="w-6 h-6 rounded-full border-2 border-white -ml-2"
-          />
-        {/each}
-        {#if members.length > 3}
-          <span class="text-sm text-gray-500 ml-2">+{members.length - 3}</span>
-        {/if}
-      </div>
-      <span class="flex items-center">
-        <span class="mr-1">
-          <img src="../../images/comments.svg" alt="" class="w-6 h-6" />
-        </span>{comments}
-      </span>
-      <span class="flex items-center">
-        <span class="mr-1">
-          <img src="../../images/attachments.svg" alt="" class="w-6 h-6" />
-        </span>{attachments}
-      </span>
-    </div>
-  </div>
+			<div class="text-sm text-gray-500 mt-1 text-right">{progress}%</div>
+		</div>
+		<div class="flex justify-between items-center mb-4 -mt-1">
+			<span class="text-sm text-gray-500 flex items-center bg-blue-100 py-1 px-2 rounded-3xl">
+				<span class="mr-2">
+					<img src="../../images/clock.svg" alt="" class="w-6 h-6" />
+				</span>{date}
+			</span>
+		</div>
+		<div class="flex justify-between text-sm text-gray-500">
+			<div class="flex items-center">
+				{#each members.slice(0, 3) as member}
+					<img src={member} alt="" class="w-6 h-6 rounded-full border-2 border-white -ml-2" />
+				{/each}
+				{#if members.length > 3}
+					<span class="text-sm text-gray-500 ml-2">+{members.length - 3}</span>
+				{/if}
+			</div>
+			<span class="flex items-center">
+				<span class="mr-1">
+					<img src="../../images/comments.svg" alt="" class="w-6 h-6" />
+				</span>{comments}
+			</span>
+			<span class="flex items-center">
+				<span class="mr-1">
+					<img src="../../images/attachments.svg" alt="" class="w-6 h-6" />
+				</span>{attachments}
+			</span>
+		</div>
+	</div>
 </div>
