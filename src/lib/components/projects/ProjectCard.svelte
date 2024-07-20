@@ -11,25 +11,25 @@
 	export let thumbnailImage;
 	export let bgColor;
 
-  let priorityColor;
-  let priorityBgColor;
-  let bgColorOpacity;
+	let priorityColor;
+	let priorityBgColor;
+	let bgColorOpacity;
 
-  $: {
-    priorityColor =
-      priority === "High Priority"
-        ? "#EF4444"
-        : priority === "Medium Priority"
-          ? "#FBBF24"
-          : "#10B981";
-    priorityBgColor =
-      priority === "High Priority"
-        ? "bg-red-100"
-        : priority === "Medium Priority"
-          ? "bg-yellow-100"
-          : "bg-green-100";
-    bgColorOpacity = `${bgColor} bg-opacity-40`; // Set opacity to 20%
-  }
+	$: {
+		priorityColor =
+			priority === 'High Priority'
+				? '#EF4444'
+				: priority === 'Medium Priority'
+					? '#FBBF24'
+					: '#10B981';
+		priorityBgColor =
+			priority === 'High Priority'
+				? 'bg-red-100'
+				: priority === 'Medium Priority'
+					? 'bg-yellow-100'
+					: 'bg-green-100';
+		bgColorOpacity = `${bgColor} bg-opacity-40`; // Set opacity to 20%
+	}
 </script>
 
 <div
