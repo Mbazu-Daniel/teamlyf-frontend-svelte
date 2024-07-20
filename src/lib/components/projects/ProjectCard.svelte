@@ -35,9 +35,6 @@
 <div
 	class="flex flex-col w-[95%] bg-[#f2f2f2] mx-auto rounded-3xl shadow-lg relative cursor-pointer"
 >
-  <div class="p-4 bg-white w-[265px] rounded-3xl -mt-16">
-    <div class="flex justify-between items-center mb-2">
-      <h3 class="text-lg font-medium font-satoshi mb-2 text-gray-900 capitalize">{title}</h3>
       <span
         class={`text-sm px-2 py-1 rounded flex items-center ${priorityBgColor}`}
         style="color: {priorityColor};"
@@ -76,6 +73,8 @@
 		<Avatar.Image src={thumbnailImage} alt="Avatar" class="w-full h-full object-cover" />
 		<Avatar.Fallback class="font-bold capitalize text-[4rem] text-dark">CN</Avatar.Fallback>
 	</Avatar.Root>
+	<div class="p-4 bg-white w-full rounded-3xl -mt-16 z-20">
+		<div class="flex justify-between items-center mb-2">
 
 			<div class="text-sm text-gray-500 mt-1 text-right">{progress}%</div>
 		</div>
