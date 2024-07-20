@@ -33,8 +33,7 @@
 </script>
 
 <div
-  class="flex flex-col w-[265px] rounded-3xl shadow-lg mb-4 relative cursor-pointer"
-  style="background-color: {bgColorOpacity};"
+	class="flex flex-col w-[95%] bg-[#f2f2f2] mx-auto rounded-3xl shadow-lg relative cursor-pointer"
 >
   <div class="flex justify-center w-full">
     <img
