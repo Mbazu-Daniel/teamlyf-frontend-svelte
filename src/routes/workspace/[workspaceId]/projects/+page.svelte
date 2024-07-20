@@ -6,9 +6,9 @@
   let addNew = "Add new project";
   let isBoardActive = true;
 
-  function toggleView(view) {
-    isBoardActive = view === "board";
-  }
+	function toggleView(board: boolean) {
+		isBoardActive = board;
+	}
 
   function handleFilter() {
     // Implement filter functionality here
