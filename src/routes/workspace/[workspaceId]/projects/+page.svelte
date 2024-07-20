@@ -1,22 +1,21 @@
 <script lang="ts">
-  import ProjectBoard from "$lib/components/projects/ProjectBoard.svelte";
-  import ProjectList from "$lib/components/projects/ProjectList.svelte";
-  import ToggleButtons from "$lib/components/ToggleButtons.svelte";
+	import ProjectBoard from '$lib/components/projects/ProjectBoard.svelte';
+	import ProjectList from '$lib/components/projects/ProjectList.svelte';
+	import ToggleButtons from '$lib/components/ToggleButtons.svelte';
 
-  let addNew = "Add new project";
-  let isBoardActive = true;
+	let addNew = 'Add new project';
+	let isBoardActive = true;
 
 	function toggleView(board: boolean) {
 		isBoardActive = board;
 	}
 
-  function handleFilter() {
-    // Implement filter functionality here
-  }
+	function handleFilter() {
+		// Implement filter functionality here
+	}
 
-  function handleAddNew() {
-    // Implement add new project functionality here
-  }
+	function handleAddNew() {
+		// Implement add new project functionality here
 	}
 </script>
 
