@@ -4,7 +4,7 @@
 	import ProfileArea from './ProfileArea.svelte';
 </script>
 
-<nav class="fixed w-full max-w-screen-2xl mx-auto z-20 bg-sidebar py-4 shadow-md">
+<nav class="fixed w-full w-screen mx-auto z-50 bg-sidebar py-4 shadow-md">
 	<div class="flex justify-between items-center px-4 relative">
 		<Avatar.Root>
 			<Avatar.Image src="../../images/logo-icon.svg" alt="teamlyf logo" />
