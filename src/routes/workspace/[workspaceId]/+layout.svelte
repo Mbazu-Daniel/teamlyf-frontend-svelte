@@ -15,7 +15,7 @@
 	injectSpeedInsights();
 </script>
 
-<div class="flex h-screen relative max-w-screen-2xl mx-auto">
+<div class="flex h-screen relative w-screen mx-auto">
 	<!-- Top Navbar -->
 	<Navbar />
 
