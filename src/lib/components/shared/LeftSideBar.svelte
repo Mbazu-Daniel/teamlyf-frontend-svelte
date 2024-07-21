@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SidebarMenu from './LeftSideBar/SidebarMenu.svelte';
 	import SidebarBottom from './LeftSideBar/SidebarBottom.svelte';
-	import SidebarRoom from './LeftSideBar/SidebarRoom.svelte';
+	// import SidebarRoom from './LeftSideBar/SidebarRoom.svelte';
 	import * as Avatar from '$lib/components/ui/avatar';
 	// import { onMount } from "svelte";
 
@@ -40,7 +40,7 @@
 		</header>
 
 		<SidebarMenu {isCollapsed} />
-		<SidebarRoom {isCollapsed} />
+		<!-- <SidebarRoom {isCollapsed} /> -->
 		<div class="mt-auto">
 			<SidebarBottom {isCollapsed} />
 		</div>
