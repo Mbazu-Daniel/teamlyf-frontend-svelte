@@ -35,5 +35,8 @@
 				{bgColor}
 			/>
 		{/each}
+	<div class="relative">
+		<div class="flex flex-col h-[23rem] gap-y-4 overflow-y-scroll">
+		</div>
 	</div>
 </div>

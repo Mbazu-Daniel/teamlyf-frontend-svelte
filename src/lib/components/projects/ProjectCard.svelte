@@ -32,9 +32,6 @@
 	}
 </script>
 
-<div
-	class="flex flex-col w-[95%] bg-[#f2f2f2] mx-auto rounded-3xl shadow-lg relative cursor-pointer"
->
 	<Avatar.Root class="w-[200px] h-[150px] mx-auto mt-4 rounded-lg ring ring-white z-10">
 		<Avatar.Image src={thumbnailImage} alt="Avatar" class="w-full h-full object-cover" />
 		<Avatar.Fallback class="font-bold capitalize text-[4rem] text-dark">CN</Avatar.Fallback>
@@ -73,6 +70,8 @@
 					class="h-2.5 rounded-full"
 					style="width: {progress}%; background: linear-gradient(90deg, rgba(235,19,6,1) 33%, rgba(255,244,15,1) 66%, rgba(0,255,102,0.989233193277311) 100%);"
 				></div>
+<div class="shrink-0 grow-0 basis-full">
+	<div class="flex flex-col w-full bg-[#f2f2f2] mx-auto rounded-3xl relative cursor-pointer">
 			</div>
 
 			<div class="text-sm text-gray-500 mt-1 text-right">{progress}%</div>
