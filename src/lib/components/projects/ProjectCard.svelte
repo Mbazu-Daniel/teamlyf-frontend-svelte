@@ -38,7 +38,6 @@
 	</Avatar.Root>
 	<div class="p-4 bg-white w-full rounded-3xl -mt-16 z-20">
 		<div class="flex justify-between items-center mb-2">
-			<h3 class="text-lg font-medium font-satoshi mb-2 text-gray-900 capitalize">{title}</h3>
 				<span class="mr-2">
 					<svg
 						width="16"
@@ -67,6 +66,7 @@
 				></div>
 <div class="shrink-0 grow-0 basis-full">
 	<div class="flex flex-col w-full bg-[#f2f2f2] mx-auto rounded-3xl relative cursor-pointer">
+				<h3 class="text-lg font-medium mb-2 text-[#4f4f4f] capitalize">{title}</h3>
 				<span
 					class={`text-[.7rem] px-2 py-1 rounded flex items-center ${priorityBgColor}`}
 					style="color: {priorityColor};"
