@@ -38,7 +38,6 @@
 	</Avatar.Root>
 	<div class="p-4 bg-white w-full rounded-3xl -mt-16 z-20">
 		<div class="flex justify-between items-center mb-2">
-				<span class="mr-2">
 					<svg
 						width="16"
 						height="16"
@@ -73,6 +72,7 @@
 				>
 			</div>
 			<h4 class="capitalize text-gray-300 text-sm py-2 -mt-2">tags</h4>
+			<span class="bg-gray-300 text-[#4f4f4f] py-1.5 px-3 rounded-md text-[.7rem]">{tags}</span>
 
 			<div class="text-sm text-gray-500 mt-1 text-right">{progress}%</div>
 		</div>
