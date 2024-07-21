@@ -21,7 +21,7 @@
 </script>
 
 <div
-	class={`fixed bg-sidebar py-4 px-6 h-full ${isCollapsed ? 'w-24' : 'w-[265px]'} transition-all duration-300 overflow-y-scroll`}
+	class={`fixed bg-sidebar py-4 px-6 h-full ${isCollapsed ? 'w-24' : 'w-[265px]'} transition-all duration-300 overflow-y-scroll z-40`}
 >
 	<div class="relative h-full flex flex-col">
 		<header class="flex items-center justify-between py-4 pr-6">
