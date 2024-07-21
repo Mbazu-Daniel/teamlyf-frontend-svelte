@@ -5,7 +5,7 @@
 	import '../../../app.css';
 	import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
 
-	let isCollapsed = false;
+	let isCollapsed = true;
 
 	function toggleSidebar() {
 		isCollapsed = !isCollapsed;
