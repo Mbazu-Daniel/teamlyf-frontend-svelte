@@ -57,7 +57,6 @@
 				</span>{priority}
 			</span>
 		</div>
-		<h4 class="capitalize text-sm text-gray-500 py-2 -mt-2">tags</h4>
 		<span class="text-gray-500 px-2 rounded-md border border-solid text-sm">{tags}</span>
 		<div class=" mt-4">
 			<div class="text-base text-gray-500">Progress</div>
@@ -73,6 +72,7 @@
 					style="color: {priorityColor};"
 				>
 			</div>
+			<h4 class="capitalize text-gray-300 text-sm py-2 -mt-2">tags</h4>
 
 			<div class="text-sm text-gray-500 mt-1 text-right">{progress}%</div>
 		</div>
