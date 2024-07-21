@@ -20,23 +20,22 @@
 -->
 		<div>action</div>
 	</div>
-	<div class="space-y-4">
-		{#each projects as project}
-			<ProjectCard
-				title={project.title}
-				tags={project.tags}
-				progress={project.progress}
-				date={project.date}
-				members={project.members}
-				comments={project.comments}
-				attachments={project.attachments}
-				priority={project.priority}
-				thumbnailImage={project.thumbnailImage}
-				{bgColor}
-			/>
-		{/each}
 	<div class="relative">
 		<div class="flex flex-col h-[23rem] gap-y-4 overflow-y-scroll">
+			{#each projects as project}
+				<ProjectCard
+					title={project.title}
+					tags={project.tags}
+					progress={project.progress}
+					date={project.date}
+					members={project.members}
+					comments={project.comments}
+					attachments={project.attachments}
+					priority={project.priority}
+					thumbnailImage={project.thumbnailImage}
+					{bgColor}
+				/>
+			{/each}
 		</div>
 	</div>
 </div>
