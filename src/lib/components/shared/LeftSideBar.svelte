@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SidebarMenu from './LeftSideBar/SidebarMenu.svelte';
 	import SidebarBottom from './LeftSideBar/SidebarBottom.svelte';
-	import SidebarRoom from './LeftSideBar/SidebarRoom.svelte';
+	// import SidebarRoom from './LeftSideBar/SidebarRoom.svelte';
 	import * as Avatar from '$lib/components/ui/avatar';
 	// import { onMount } from "svelte";
 
@@ -21,7 +21,7 @@
 </script>
 
 <div
-	class={`fixed bg-sidebar py-4 px-6 h-full ${isCollapsed ? 'w-24' : 'w-[265px]'} transition-all duration-300 overflow-y-scroll`}
+	class={`fixed bg-sidebar py-4 px-6 h-full ${isCollapsed ? 'w-24' : 'w-[265px]'} transition-all duration-300 overflow-y-scroll z-40`}
 >
 	<div class="relative h-full flex flex-col">
 		<header class="flex items-center justify-between py-4 pr-6">
@@ -40,7 +40,7 @@
 		</header>
 
 		<SidebarMenu {isCollapsed} />
-		<SidebarRoom {isCollapsed} />
+		<!-- <SidebarRoom {isCollapsed} /> -->
 		<div class="mt-auto">
 			<SidebarBottom {isCollapsed} />
 		</div>

@@ -26,7 +26,7 @@
 
 		<!-- Main Content -->
 		<div
-			class={`${isCollapsed ? 'pl-28' : 'pl-[281px]'} flex-1 py-8 pr-4 transition-all duration-300 bg-white`}
+			class={`${isCollapsed ? 'pl-28 w-[calc(100%-6rem)]' : 'pl-[281px] w-[calc(100%-265px)]'} flex-1 py-8 pr-4 transition-all duration-300 bg-white`}
 		>
 			<slot />
 		</div>

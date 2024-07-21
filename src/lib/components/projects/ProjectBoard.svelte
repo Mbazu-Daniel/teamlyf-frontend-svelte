@@ -166,31 +166,31 @@
 			title="New Projects"
 			count={projects.new.length}
 			projects={projects.new}
-			bgColor="bg-blue-500"
+			bgColor="#fff"
 		/>
 		<ProjectColumn
 			title="In Progress"
 			count={projects.inProgress.length}
 			projects={projects.inProgress}
-			bgColor="bg-yellow-500"
+			bgColor="#fff"
 		/>
 		<ProjectColumn
 			title="Completed"
 			count={projects.completed.length}
 			projects={projects.completed}
-			bgColor="bg-green-500"
+			bgColor="#fff"
 		/>
 		<ProjectColumn
 			title="In Review"
 			count={projects.inReview.length}
 			projects={projects.inReview}
-			bgColor="bg-red-500"
+			bgColor="#fff"
 		/>
 		<ProjectColumn
 			title="Blocked"
 			count={projects.blocked.length}
 			projects={projects.blocked}
-			bgColor="bg-black"
+			bgColor="#fff"
 		/>
 	</div>
 </div>
