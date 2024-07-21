@@ -6,8 +6,8 @@
 	export let bgColor;
 </script>
 
-<div class={`min-w-[30%] shrink-0 grow-0 basis-1 ${bgColor} p-4 rounded-t-3xl`}>
-	<div class={`flex justify-between mb-4 p-2 capitalize`}>
+<div class={`min-w-[24%] shrink-0 grow-0 bg-gray-50 py-4 px-2 mx-auto rounded-t-3xl shadow-md`}>
+	<div class={`flex justify-between mb-4 p-2 capitalize items-center`}>
 		<h5 class="text-[1.6rem] font-bold text-[#282828]">
 			{title}<span class="text-base text-[#828282] bg-[#D5D5D5] px-3 py-1 rounded ml-4"
 				>{count}</span
