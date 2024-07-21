@@ -19,7 +19,9 @@
 	}
 </script>
 
-<section class="flex min-h-screen rounded-t-3xl border border-solid border-gray-200 p-5">
+<section
+	class="rounded-3xl border border-solid border-gray-200 overflow-hidden px-6 pt-4 w-full h-full mx-auto"
+>
 	<div class="flex-1 flex flex-col text-gray-200">
 		<div class="p-4">
 			<h1 class="text-[2.5rem] text-gray-600 font-semibold">Projects</h1>
