@@ -1,4 +1,5 @@
 <script>
+
     export let dest;
     export let msg;
     export let time;
@@ -28,3 +29,34 @@
    
   </style>
   
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

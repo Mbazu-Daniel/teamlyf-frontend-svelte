@@ -1,43 +1,50 @@
 <script lang="ts">
-  import ProjectBoard from "$lib/components/projects/ProjectBoard.svelte";
-  import ProjectList from "$lib/components/projects/ProjectList.svelte";
-  import ToggleButtons from "$lib/components/ToggleButtons.svelte";
+	import ProjectBoard from '$lib/components/projects/ProjectBoard.svelte';
+	import ProjectList from '$lib/components/projects/ProjectList.svelte';
+	import ToggleButtons from '$lib/components/ToggleButtons.svelte';
 
-  let addNew = "Add new project";
-  let isBoardActive = true;
+	let addNew = 'Add new project';
+	let isBoardActive = true;
 
-  function toggleView(view) {
-    isBoardActive = view === "board";
-  }
+	function toggleView(board: boolean) {
+		isBoardActive = board;
+	}
 
-  function handleFilter() {
-    // Implement filter functionality here
-  }
+	function handleFilter() {
+		// Implement filter functionality here
+	}
 
-  function handleAddNew() {
-    // Implement add new project functionality here
-  }
+	function handleAddNew() {
+		// Implement add new project functionality here
+	}
 </script>
 
-<div class="flex h-screen py-4">
-  <div
-    class="flex-1 flex flex-col rounded-t-3xl border border-solid border-t-1 border-b-0 text-gray-200"
-  >
-    <div class="p-4">
-      <h1 class="text-2xl text-black font-semibold mb-4">Projects</h1>
-      <p class="text-gray-500 mb-6">Manage all projects here</p>
-      <ToggleButtons
-        {isBoardActive}
-        onToggleView={toggleView}
-        onFilter={handleFilter}
-        onAddNew={handleAddNew}
-        {addNew}
-      />
-    </div>
-    {#if isBoardActive}
-      <ProjectBoard />
-    {:else}
-      <ProjectList />
-    {/if}
-  </div>
-</div>
+<section
+	class="rounded-3xl border border-solid border-gray-200 overflow-hidden px-6 pt-4 w-full h-full mx-auto"
+>
+	<div class="flex-1 flex flex-col text-gray-200">
+		<div class="mb-4">
+			<h1 class="text-[2.5rem] text-gray-600 font-semibold">Projects</h1>
+			<p class="text-[1.8rem] text-gray-300">Manage all projects here</p>
+			<ToggleButtons
+				{isBoardActive}
+				onToggleView={toggleView}
+				onFilter={handleFilter}
+				onAddNew={handleAddNew}
+				{addNew}
+			/>
+		</div>
+
+		<!--
+ !   ╭───────────────────────────────────────────────────────╮
+ !   │ TODO: use higher order component for the project      │
+ !   │ board and list                                        │
+ !   ╰───────────────────────────────────────────────────────╯
+-->
+		{#if isBoardActive}
+			<ProjectBoard />
+		{:else}
+			<ProjectList />overflow-hidden
+		{/if}
+	</div>
+</section>
