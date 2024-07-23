@@ -1,9 +1,8 @@
-<!-- DirectMessage.svelte -->
 <script>
   import ChatLeftSide from "./ChatLeftSide.svelte";
   import ChatMiddleSide from "./ChatMiddleSide.svelte";
   import ChatRightSide from "./ChatRightSide.svelte";
-  // import C from "./ScheduleMeeting.svelte"
+  
 
   export let direct = false;
   function updateState(newValue) {
@@ -11,9 +10,8 @@
   }
 </script>
 <!-- add w-full to all sides -->
-<div class="flex flex-row w-full">
+<div class="flex flex-row w-full h-full">
   <ChatLeftSide {direct} {updateState} />
   <ChatMiddleSide {direct} />
   <!-- <ChatRightSide {direct} /> -->
-  <!-- <C /> -->
 </div>
