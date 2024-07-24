@@ -23,7 +23,7 @@
   };
 </script>
 
-<div class="flex-50 h-[849px] pt-7 bg-light w-full min-w-[600px] rounded-[6px]">
+<div class="h-[849px] bg-light w-full min-w-[600px] rounded-[6px]">
   {#if direct === false }
     <div class="flex flex-row justify-between m-5">
       <div class="flex flex-row gap-1 items-center">
@@ -34,32 +34,19 @@
         />
         <div>
           <h2 class="text-md font-bold leading-7">Adura O.</h2>
-          <p class="font-light text-xs pb-2 leading-[12px] text-[#6e5454]">
-            @AduraOgunlana
+          <p class="font-light text-xs pb-2 leading-[12px] text-[#6e5454]">@AduraOgunlana
+            
           </p>
         </div>
       </div>
   
-      <div class="flex flex-row justify-center gap-4 my-2 py-3">
-        <div
-          class="flex justify-between items-center text-purple-light gap-4 px-4 h-12"
-        >
-          <div
-            class="bg-white text-stone-500 font-semibold px-[4px] py-[1px] text-center rounded-[4px]"
-          >
+      <div class="flex flex-row justify-center items-center gap-2 my-2 py-3">
+        <div class="flex justify-between items-center text-purple-light gap-2 px-2 h-12">
+          <div class="bg-white text-stone-500 font-semibold px-[4px] py-[1px] text-center rounded-[4px]">
             +
           </div>
           <div class="text-stone-500">Add to a team</div>
         </div>
-        <!-- <div
-          class="flex justify-center flex-center py-[4px] px-[4px] ring-2 bg-purple-light ring-stone-300 h-12 rounded-lg text-center"
-        >
-          <img
-            class="w-9 h-9 items-center text-stone-300"
-            src="../../chats/search_icon.svg"
-            alt="search icon"
-          />
-        </div> -->
         <div class="searchbar w-[120px] rounded-[7px] relative">
           <img
             src="../../chats/search_icon.svg"
@@ -74,28 +61,28 @@
             class="rounded-[7px] border-none block outline-none w-full h-full ring-1 ring-inset ring-gray-300 shadow-md pointer-events-auto pr-2  py-3 ps-[30px]"
           />
         </div>
-        <div class="py-2 h-12">
+        <div>
           <img
             class="items-center justify-center py-[7px]"
             src="../../chats/video_icon.svg"
             alt="more icon"
           />
         </div>
-        <div class="py-2 h-12">
+        <div>
           <img
             class="items-center justify-center py-[7px]"
             src="../../chats/phone_icon.svg"
             alt="more icon"
           />
         </div>
-        <div class="py-2 h-12">
+        <div>
           <img
             class="items-center justify-center py-[7px]"
             src="../../chats/info_icon.svg"
             alt="more icon"
           />
         </div>
-        <div class="py-2 h-12">
+        <div>
           <img
             class="items-center justify-center py-[7px] rotate-90"
             src="../../chats/threedot_icon.svg"

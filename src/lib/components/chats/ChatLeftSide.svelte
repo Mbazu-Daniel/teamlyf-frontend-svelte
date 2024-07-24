@@ -23,15 +23,13 @@
   <div
     class="flex flex-row justify-between p-2 bg-purple-light h-[43px] w-[278px] rounded-[6px]"
   >
-    <button
-      class={`top-[6px] left-2 rounded-[3px] w-[50%] leading-[21px] text-sm cursor-pointer text-center ${!direct ? "bg-white font-bold" : ""}`}
+    <button class={`top-[6px] left-2 rounded-[3px] w-[50%] leading-[21px] text-lg cursor-pointer text-center ${!direct ? "bg-stone-200 font-bold" : ""}`}
       on:click={() => handleClick(false)}
       type="button"
     >
       Direct
     </button>
-    <button
-      class={`top-[6px] left-2 rounded-[3px] w-[50%] leading-[21px] text-sm cursor-pointer text-center ${direct ? "bg-white font-bold" : ""}`}
+    <button class={`top-[6px] left-2 rounded-[3px] w-[50%] leading-[21px] text-lg cursor-pointer text-center ${direct ? "bg-stone-200 font-bold" : ""}`}
       on:click={() => handleClick(true)}
       type="button"
     >
@@ -76,30 +74,30 @@
       />
     </div>
   </div>
-  <div class="overflow-y-auto h-[77%] bg-scroll">
-    <!-- <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats />
-      <Chats /> -->
+  <div class="overflow-y-auto h-[77%] bg-scroll">  
     {#if direct === false}
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
+      <Chats />
       <Chats />
     {:else}
       <Team />
     {/if}
   </div>
   <div
-    class="flex-end text-white bg-purple text-center w-[247px] h-[40px] left-10 p-2 rounded-[10px] mx-auto cursor-pointer place-items-center"
+    class="flex-end text-white bg-primary text-center w-full h-[40px] p-2 rounded-[10px] cursor-pointer items-center"
   >
     <span
-      class="w-8 h-8 px-[4px] py-[2px] mr-2 font-bold text-[16px] fill-current bg-[#FFFFFF] rounded-[4px] text-purple"
+      class="w-8 h-8 px-[4px] py-[2px] mr-2 font-bold text-[16px] fill-current bg-[#FFFFFF] rounded-[4px] text-primary"
       >+</span
     > Start new conversations
   </div>
